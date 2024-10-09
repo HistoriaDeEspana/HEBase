@@ -1,118 +1,138 @@
-body{
-    font-family: Poppins;
+/* Variables CSS para reutilización */
+:root {
+    --primary-bg-color: #9dc19d;
+    --secondary-bg-color: #d3d5b0;
+    --text-color: #50302cf7;
+    --link-color: white;
+    --link-hover-color: #ac956f;
+    --footer-hover-color: #443829;
 }
 
-*{
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--secondary-bg-color);
+    color: var(--text-color);
+    margin: 0;
+    line-height: 1.6;
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-nav{
-    height: 60px;
-    background-color:#5c627a;
-    text-align: center;
+nav {
+    height: 80px;
+    background-color: var(--primary-bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-nav ul{
-     list-style: none;
-     display: inline-block;
-     padding:18px;
+nav ul {
+    list-style: none;
+    display: flex;
 }
 
-nav ul li{
-      float: left;
-      
+nav ul li {
+    position: relative;
 }
 
 nav ul li a {
-      color: white;
-      font-weight: bold;
-      text-decoration: none;
-      font-size: 15px;
-      padding: 18px;
+    color: var(--link-color);
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 20px;
+    display: block;
+    transition: background-color 0.3s ease;
 }
 
-#administracion nav ul li a:hover{
-    background-color: #929fb3;
-}
-#barra-top nav ul li a:hover{
-    background-color: #929fb3;
+nav ul li:hover > a {
+    background-color: var(--link-hover-color);
 }
 
-#barra-top nav ul li {
-    position:relative;
-    float:left;
-    margin:0;
-    padding:0;
-    
-}
-#barra-top nav ul ul {
-    display:none;
-    position:absolute;
-    top:100%;
-    left:0;
-    background:#5c627a;
-    padding-top: 25%;
-    padding-bottom: 25%;
+nav ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--primary-bg-color);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 180px;
 }
 
-#barra-top nav ul ul li {
-    float:none;
-    width:150px
+nav ul ul li {
+    width: 100%;
 }
 
-#barra-top nav ul ul a {
-    line-height:500%;
-    padding:cover;
+nav ul ul a {
+    padding: 15px;
+    color: var(--link-color);
 }
 
-#barra-top nav ul li:hover > ul {
-    display:block;
+nav ul li:hover > ul {
+    display: block;
 }
 
+/* Footer */
 #footer_section {
-    background-color: #5c627a;
-    color: white;
+    background-color: var(--primary-bg-color);
+    color: var(--link-color);
     padding: 20px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    background-size:cover;
+    flex-wrap: wrap;
 }
 
 #footer_section nav {
-    margin-right: auto;
-    text-align: center;
+    flex-grow: 1;
+    text-align: center; /* Centra los botones */
 }
 
 #footer_section ul {
     list-style: none;
-    margin: 0;
-    padding: 0 auto;
+    display: inline-flex;
+    padding: 0;
 }
 
 #footer_section ul li {
-    display: inline-block;
+    margin-left: 10px;
 }
 
 #footer_section ul li a {
-    color: black;
+    color: var(--link-color);
     text-decoration: none;
     padding: 10px;
+    transition: color 0.3s ease;
 }
 
-#footer_section ul li button{
-    padding: 3%;
-    margin: 0 0 0 10px;
+#footer_section ul li a:hover {
+    color: var(--footer-hover-color);
 }
 
-#footer_section nav ul li a:hover{
-    color: orange;
-
+/* Copyright a la derecha */
+.pie_pagina {
+    font-size: small;
+    text-align: right; /* Alinea a la derecha */
+    margin-left: auto;
+    margin-top: 20px;
+    flex-grow: 1; /* Hace que ocupe todo el espacio necesario para estar a la derecha */
 }
 
-#logo-link {
-    margin-right: auto;
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pie_pagina {
+        text-align: center; /* Centrar en móviles */
+    }
 }
-
-
