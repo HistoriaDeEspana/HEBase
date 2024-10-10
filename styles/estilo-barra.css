@@ -1,4 +1,3 @@
-/* Variables CSS para reutilización */
 :root {
     --primary-bg-color: #9dc19d;
     --secondary-bg-color: #d3d5b0;
@@ -8,11 +7,22 @@
     --footer-hover-color: #443829;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.posicion_body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--secondary-bg-color);
     color: var(--text-color);
-    margin: 0;
     line-height: 1.6;
 }
 
@@ -79,7 +89,10 @@ nav ul li:hover > ul {
     display: block;
 }
 
-/* Footer */
+main {
+    flex-grow: 1;
+}
+
 #footer_section {
     background-color: var(--primary-bg-color);
     color: var(--link-color);
@@ -88,11 +101,12 @@ nav ul li:hover > ul {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    margin-top: auto;
 }
 
 #footer_section nav {
     flex-grow: 1;
-    text-align: center; /* Centra los botones */
+    text-align: center;
 }
 
 #footer_section ul {
@@ -116,16 +130,14 @@ nav ul li:hover > ul {
     color: var(--footer-hover-color);
 }
 
-/* Copyright a la derecha */
 .pie_pagina {
     font-size: small;
-    text-align: right; /* Alinea a la derecha */
+    text-align: right;
     margin-left: auto;
     margin-top: 20px;
-    flex-grow: 1; /* Hace que ocupe todo el espacio necesario para estar a la derecha */
+    flex-grow: 1;
 }
 
-/* Media Queries for Mobile */
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
@@ -133,6 +145,6 @@ nav ul li:hover > ul {
     }
 
     .pie_pagina {
-        text-align: center; /* Centrar en móviles */
+        text-align: center;
     }
 }
