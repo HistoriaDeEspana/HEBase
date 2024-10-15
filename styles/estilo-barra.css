@@ -11,15 +11,6 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-}
-
-.posicion_body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--secondary-bg-color);
     color: var(--text-color);
@@ -67,25 +58,27 @@ nav ul li:hover > a {
 nav ul ul {
     display: none;
     position: absolute;
-    top: 100%;
     left: 0;
     background-color: var(--primary-bg-color);
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 1000;
-    width: 180px;
+    padding: 0;
+    display: flex; /* Asegúrate de que se muestre horizontalmente */
 }
 
 nav ul ul li {
-    width: 100%;
+    display: inline-block; /* Alinea en fila */
+    width: auto; /* Ancho automático */
 }
 
 nav ul ul a {
-    padding: 15px;
+    padding: 10px 15px; /* Espaciado ajustado */
     color: var(--link-color);
 }
 
+/* Mostrar el submenú al hacer hover sobre el elemento padre */
 nav ul li:hover > ul {
-    display: block;
+    display: flex;
 }
 
 main {
@@ -100,7 +93,6 @@ main {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    margin-top: auto;
 }
 
 #footer_section nav {
@@ -133,8 +125,13 @@ main {
     font-size: small;
     text-align: right;
     margin-left: auto;
-    margin-top: 20px;
     flex-grow: 1;
 }
 
+#frame_cabecera, #frame_pie-pagina {
+    z-index: 2;
+}
 
+#frame_cuerpo {
+    z-index: 0;
+}

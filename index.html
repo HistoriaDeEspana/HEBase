@@ -15,36 +15,13 @@
         <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
     </head>
 
-    <body class="posicion_body">
-        <header id="barra-top">
-            <nav aria-label="Main navigation">
-                <a href="index.html" id="logo-link"><img src="img/logo.png" height="50" alt="Logo HistoriaDeExtremadura"></a>
-                <ul>
-                    <li><a href="#">Épocas</a>
-                        <ul>
-                            <li><a href="#">1º Época</a></li>
-                            <li><a href="#">2º Época</a></li>
-                            <li><a href="#">3º Época</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Contacto</a></li>
-                    <li><a href="#">Ubicación</a></li>
-                    <li><a href="#">Reservas</a></li>
-                </ul>
-            </nav>
-        </header>
+    <frameset rows="60%, 100%, 19%" class="posicion_body">
+        
+        <frame id="frame_cabecera" scrolling="no" frameborder="0" noresize src="header.html">
 
+        <frame id="frame_cuerpo" scrolling="no" frameborder="0" noresize src="vacio.html">
 
-        <footer id="footer_section" role="contentinfo">
-            <nav aria-label="Footer navigation">
-                <ul>
-                    <li><a href="#">Acerca de</a></li>
-                    <li><a href="#">Términos</a></li>
-                    <li><a href="#">Privacidad</a></li>
-                    <li><a href="#">Soporte</a></li>
-                </ul>
-            </nav>
-            <p class="pie_pagina">Copyright &copy; 2024</p>
-        </footer>
-    </body>
+        <frame id="frame_pie-pagina" scrolling="no" frameborder="0" noresize src="footer.html">
+        
+    </frameset>
     </html>
