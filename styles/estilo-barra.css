@@ -72,16 +72,21 @@ nav ul li {
     position: relative;
 }
 
-nav ul li a {
+nav ul li button {
     color: var(--link-color);
     font-weight: bold;
-    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
     font-size: 16px;
     padding: 20px;
     display: block;
     transition: color 0.3s ease;
 }
 
+nav ul li button:hover {
+    color: var(--footer-hover-color);
+}
 
 nav ul ul {
     display: none;
@@ -94,8 +99,7 @@ nav ul ul {
     opacity: 0; 
 }
 
-
-.epocas-menu:focus-within > a {
+.epocas-menu:focus-within > button {
     animation: moveLeft 0.5s forwards;
 }
 
@@ -104,25 +108,17 @@ nav ul ul {
     animation: slideIn 0.5s forwards;
 }
 
-nav ul ul a:focus {
-    outline: none; 
-}
-nav ul ul a:hover{
-    color: var(--footer-hover-color);
-}
-nav ul li a:hover{
-    color: var(--footer-hover-color);
-}
-
-nav ul ul li {
-    display: inline-block;
-    width: 100px;
-}
-
-nav ul ul a {
+nav ul ul button {
     padding: 10px 15px;
     color: var(--link-color);
+    background: none;
+    border: none;
+    cursor: pointer;
     transition: color 0.3s ease;
+}
+
+nav ul ul button:hover {
+    color: var(--footer-hover-color);
 }
 
 main {
@@ -154,14 +150,16 @@ main {
     margin-left: 10px;
 }
 
-#footer_section ul li a {
+#footer_section ul li button {
     color: var(--link-color);
-    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
     padding: 10px;
     transition: color 0.3s ease;
 }
 
-#footer_section ul li a:hover {
+#footer_section ul li button:hover {
     color: var(--footer-hover-color);
 }
 
